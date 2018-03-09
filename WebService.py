@@ -18,8 +18,9 @@ hx.tare()
 class get_coke:
   def GET(self):
     val = hx.get_weight(5)
-    val = val / 2000
-    val = val + 1
+    val = val / 11500
+    if val < 0:
+      val = 0
     web.header("Access-Control-Allow-Origin", "*")
     return val
 
